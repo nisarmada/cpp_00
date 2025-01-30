@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/28 14:14:46 by nikos         #+#    #+#                 */
-/*   Updated: 2025/01/30 13:49:27 by nsarmada      ########   odam.nl         */
+/*   Updated: 2025/01/30 16:56:54 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,26 @@ void PhoneBook::addContact()
 	printContact(NewContact);
 	contacts[ContactCount] = NewContact;
 	ContactCount++;
+}
+
+void PrintTable()
+{
+	std::cout << std::setw(10) << "Index" << "|"
+		<< std::setw(10) << "First Name" << "|"
+		<< std::setw(10) << "last Name" << "|"
+		<< std::setw(10) << "Nickame" << std::endl;
+}
+
+void PhoneBook::searchContact() const
+{
+	if (ContactCount == 0)
+	{
+		std::cout << "Phonebook is empty" << std::endl;
+		return;
+	}
+	PrintTable();
+	for (int i = 0; i < ContactCount; i++)
+	{
+		
+	}
 }
