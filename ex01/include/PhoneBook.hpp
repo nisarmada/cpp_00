@@ -6,7 +6,7 @@
 /*   By: nsarmada <nsarmada@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/27 12:33:07 by nsarmada      #+#    #+#                 */
-/*   Updated: 2025/01/30 13:35:12 by nsarmada      ########   odam.nl         */
+/*   Updated: 2025/02/07 15:05:29 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <iomanip>
 #include <iostream>
 #include <cctype>
+#include <stdexcept>
+#include <cstdlib>
 
 class PhoneBook
 {
@@ -31,6 +33,9 @@ class PhoneBook
 		void addContact();
 		void searchContact() const;
 		void displayContact(int index) const;
+		void PrintTable() const;
+		void DisplayOne(int index) const;
+
 };
 
 #endif

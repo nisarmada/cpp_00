@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/28 14:17:33 by nikos         #+#    #+#                 */
-/*   Updated: 2025/01/28 15:02:43 by nikos         ########   odam.nl         */
+/*   Updated: 2025/02/07 14:20:04 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ class Contact
 	public:
 		Contact(); //Constructor
 	
+	
+	void DisplayContact(int index) const;
+
 	//Setter functions
 	void setFirstName(const std::string& FirstName);
 	void setLastName(const std::string& LastName);
