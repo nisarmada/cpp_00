@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/28 15:53:32 by nikos         #+#    #+#                 */
-/*   Updated: 2025/02/07 16:53:20 by nsarmada      ########   odam.nl         */
+/*   Updated: 2025/02/10 13:13:00 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 	while (true)
 	{
 		std::cout << "Enter Command" << std::endl;
-		std::getline(std::cin, command);
+		// std::getline(std::cin, command);
 		if (!std::getline(std::cin, command))
             break;
 		if (command == "ADD")
