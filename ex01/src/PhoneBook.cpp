@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/28 14:14:46 by nikos         #+#    #+#                 */
-/*   Updated: 2025/02/10 13:09:21 by nsarmada      ########   odam.nl         */
+/*   Updated: 2025/02/12 15:34:07 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static void getContact(std::string message, std::string& input)
 	while (true)
 	{
 		std::cout << message << std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			exit(EXIT_SUCCESS);
 		if (!input.empty())
 			return ;
 		std::cout << "Input cannot be empty. Please try again:)" << std::endl;
@@ -68,7 +69,10 @@ void PhoneBook::addContact()
 	NewContact.setNickName(input);
 	getContact("Enter phone number", input);
 	while (!IsValidPhoneNumber(input))
-		std::getline(std::cin, input);
+	{
+		if (!std::getline(std::cin, input))
+			break ;
+	}
 	NewContact.setPhoneNumber(input);
 	getContact("Enter Darkest secret", input);
 	NewContact.setDarkestSecret(input);
